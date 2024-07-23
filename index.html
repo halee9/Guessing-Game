@@ -29,18 +29,8 @@
 
     // Keep prompting the user until they guess the correct number
     while (guess != randomNumber) {
-      // If the guess is not a number, prompt the user to enter a number
-      if (isNaN(guess)) {
-        guess = prompt("Please enter a number");
-        continue;
-      }
-      // If the guess is not between 1 and 10, prompt the user to enter a number between 1 and 10
-      else if (guess < 1 || guess > 10) {
-        guess = prompt("Please enter a number between 1 and 10");
-        continue;
-      }
       // If the guess is not correct, prompt the user to guess again
-      else if (guess < randomNumber) {
+      if (guess < randomNumber) {
         guess = prompt("Your guess was too low. Guess again.");
       }
       else {
